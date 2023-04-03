@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken")
 const passport = require("passport")
 const passportJWT = require("passport-jwt")
 const app = express();
-
+//
 // JSON Web Token Setup
 let ExtractJwt = passportJWT.ExtractJwt;
 let JwtStrategy = passportJWT.Strategy;
