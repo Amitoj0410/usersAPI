@@ -42,6 +42,10 @@ app.use(passport.initialize())
 
 passport.use(strategy)
 
+app.get("/", (req,res) => {
+    res.send("<h1>Welcome</h1>")
+})
+
 app.post("/api/user/register", (req, res) => {
     userService.registerUser(req.body)
     .then((msg) => {
