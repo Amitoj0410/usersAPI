@@ -39,6 +39,10 @@ module.exports.registerUser = function (userData) {
         {
             reject("Please Enter User Name")
         }
+        else if (userData.password.length == 0)
+        {
+            reject("Please Enter Password")
+        }
         else if (userData.password != userData.password2) {
             reject("Passwords do not match");
         } else {
