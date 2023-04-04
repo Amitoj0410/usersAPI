@@ -64,7 +64,7 @@ app.post("/api/user/login", (req, res) => {
             userName: user.userName,
         };
 
-        let token = jwt.sign(payload, jwtOptions.secretOrKey) //{ expiresIn: 30 * 60 } // expires in 30 mins
+        let token = jwt.sign(payload, jwtOptions.secretOrKey, { expiresIn: 30 }) //{ expiresIn: 30 * 60 } // expires in 30 mins
 
         res.json({ message: 'login successful', token: token });
 
